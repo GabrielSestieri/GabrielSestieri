@@ -14,7 +14,7 @@ The python folder is obviously where all my python projects are. These include:
 		A simple hangman game that generates a random word from a text file and gives the user three tries to guess it.
 	
 	4. Basketball Predictor
-		Allows the user to input two NBA teams and will output several bar graphs comparing team stats and a pie char predicting who would win between the two teams based on stats.
+		Allows the user to input two NBA teams and will output several bar graphs comparing team stats and a pie char predicting who would win between the two. teams based on stats.
 
 	5. Robot Fight
 		A rudimentary robot fight simulation containing two classes. 
