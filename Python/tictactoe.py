@@ -1,8 +1,12 @@
+from termcolor import colored
+
+winner = False
 game_on = True
-game_list = [0,1,2]
-board = [[" "," "," "," "],
-        [" "," "," "," "],
-        [" "," "," "," "]]
+board = [["0","1","2","3"], 
+         [" "," "," "," "], 
+         [" "," "," "," "], 
+         [" "," "," "," "],
+         [" "," "," "," "]]
 
 def display_board(board):
     '''
@@ -13,10 +17,10 @@ def display_board(board):
     Returns: 
         A printed output of the board.
     '''
-    
     print("Here is the current board: ")
-    print(board)
-    
+    for lst in board[::-1]:
+        print(lst)
+   
 def position_choice():
     '''
     Description: 
@@ -27,14 +31,30 @@ def position_choice():
         row: An integer that will act as the first index that will choose the "row"(list).
         column: An integer that will act as the second index and will choose the position in the list that will be replaced.
     '''
-    row = "wrong"
+    column_list = [0,1,2,3]
     column = "wrong"
-    while row and column not in game_list:
-        row = int(input("Pick a row (0-3): "))
+    row = 0
+    while column not in column_list and row == 0:
         column = int(input("Pick a column (0-3): "))
-        
-        return row, column
-            
+        for i in range(0,5):
+            if column == i:
+                if board[1][i] == " ":
+                    row = 1
+                
+                elif board[2][i] == " ":
+                    row = 2
+                
+                elif board[3][i] == " ":
+                    row = 3
+                
+                elif board[4][i] == " ":
+                    row = 4
+                
+                elif board[4][i] != " ":
+                    print("There is no more space in this column. Pick another.")
+                    
+                return row, column
+                              
 def replacement_choice(board, row, column):
     '''
     Description: 
@@ -45,12 +65,64 @@ def replacement_choice(board, row, column):
         column: An integer that will act as the second index and will choose the position in the list that will be replaced.
     Returns:
         board: An updated list of the previos variable 'board'. User's input was put in place of an empty string.
-
     '''
-    user_placement = input("Pick a symbol or string as your character: ")
-    board[row][column] = user_placement
-    return board
+    pos = "full"
+    while pos == "full":
+        if board[row][column] == " ":
+            user_placement = input("Pick a symbol or string as your character: ")
+            board[row][column] = user_placement
+            pos = "empty"
+            
 
+        else:
+            print("There's already a piece here! Try again.")
+            pos = "invalid"
+        
+        return board
+            
+ 
+def check_winner(board):
+    while winner == False:
+        #Checks vertically
+        if board[1][0] == board[2][0] and board[2][0] == board[3][0] and board[3][0] == board[4][0] and board[1][0] != " " and board[2][0] != " " and board[3][0] != " " and board[4][0] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][1] == board[2][1] and board[2][1] == board[3][1] and board[3][1] == board[4][1] and board[1][1] != " " and board[2][1] != " " and board[3][1] != " " and board[4][1] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][2] == board[2][2] and board[2][2] == board[3][2] and board[3][2] == board[4][2] and board[1][2] != " " and board[2][2] != " " and board[3][2] != " " and board[4][2] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][3] == board[2][3] and board[2][3] == board[3][3] and board[3][3] == board[4][3] and board[1][3] != " " and board[2][3] != " " and board[3][3] != " " and board[4][3] != " " :
+            print("Congrats! You Won.")
+            return True
+        
+        #Checks horizontally
+        elif board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][2] == board[1][3] and board[1][0] != " " and board[1][1] != " " and board[1][2] != " " and board[1][3] != " " :
+            
+            print("Congrats! You Won.")
+            return True
+        elif board[2][0] == board[2][1] and board[2][1] == board[2][2] and board[2][2] == board[2][3] and board[2][0] != " " and board[2][1] != " " and board[2][2] != " " and board[2][3] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][0] == board[1][1] and board[3][1] == board[3][2] and board[3][2] == board[3][3] and board[3][0] != " " and board[3][1] != " " and board[3][2] != " " and board[3][3] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][0] == board[1][1] and board[4][1] == board[4][2] and board[4][2] == board[4][3] and board[4][0] != " " and board[4][1] != " " and board[4][2] != " " and board[4][3] != " " :
+            print("Congrats! You Won.")
+            return True
+        
+        #Checks diagonally
+        elif board[1][0] == board[2][1] and board[2][1] == board[3][2] and board[3][2] == board[4][3] and board[1][0] != " " and board[2][1] != " " and board[3][2] != " " and board[4][3] != " " :
+            print("Congrats! You Won.")
+            return True
+        elif board[1][3] == board[2][2] and board[2][2] == board[3][1] and board[3][1] == board[4][0] and board[1][3] != " " and board[2][2] != " " and board[3][1] != " " and board[4][0] != " " :
+            print("Congrats! You Won.")
+            return True
+
+        else:
+            return False
+            
 def gameon_choice():
     '''
     Description:
@@ -60,23 +132,29 @@ def gameon_choice():
     Returns:
         Either True or False.
     '''
+    
     choice = "wrong"
-    while choice not in ["Y", "N"]:
-        choice = input("Keep playing? (Y/N): ")
-        
-        if choice not in ["Y", "N"]:
-            print("Sorry I don't understnad")
+    option = ["Y", "N"]
+    
+    while choice not in option :
+        choice = input("Keep playing? (Y/N): ").upper()
+        if choice not in option:
+            print("Sorry I don't understand")
+            
     if choice == "Y":
         return True
     else:
         return False
+    pass   
     
 
 if __name__ == "__main__":
-    while game_on == True:
+    while winner == False:
         display_board(board)
         row,column = position_choice()
         board = replacement_choice(board, row,column)
-        display_board(board)
-        game_on = gameon_choice()
-        display_board()
+        winner = check_winner(board)
+        if winner == True:
+            display_board(board)
+        
+ 
