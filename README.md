@@ -15,4 +15,7 @@ The python folder is obviously where all my python projects are. These include:
 	
 	4. Basketball Predictor
 		Allows the user to input two NBA teams and will output several bar graphs comparing team stats and a pie char predicting who would win between the two teams based on stats.
+
+	5. Robot Fight
+		A rudimentary robot fight simulation containing two classes. 
 	
