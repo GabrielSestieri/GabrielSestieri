@@ -1,0 +1,217 @@
+#Animals
+sponge
+silkworm
+alpaca
+armadillo
+chinchilla
+coyote
+doormouse
+gazelle
+butterfly
+camel
+lynx
+impala
+jellyfish
+lemming
+manatee
+narwhal
+ocelot
+orangutan
+orca
+puma
+porcupine
+raccoon
+reindeer
+skunk
+squirrel
+naked mole rat
+terrapin
+walrus
+wombat
+zebra
+cicada
+snail
+beetle
+locust
+sugar glider
+#Careers
+acupuncturist
+sanitation engineer
+food scientist
+funeral director
+meteorologist
+bounty hunter
+hippotherapist
+white hat hacker
+tattoo artist
+beekeeper
+entrepreneur
+phlebotomist
+barista
+rodeo clown
+cartographer
+referee
+sommelier
+dog trainer
+doula
+pastry chef
+undercover agent
+landscape architect
+zoologist
+window washer
+astronaut
+bagpipe player
+egyptologist
+health inspector
+podiatrist
+city planner
+surveyor
+fletcher
+pundit
+professional surfer
+news anchor
+#Capital cities
+abu dhabi
+abuja
+addis ababa
+amman
+the hague
+andorra la vella
+antananarivo
+ashgabat
+asmara
+asuncion
+athens
+beijing
+beirut
+brazzaville
+canberra
+caracas
+dakar
+damascus
+dhaka
+dushanbe
+hanoi
+helsinki
+islamabad
+kabul
+kampala
+kingston
+kinshasa
+mexico city
+naypyidaw
+new delhi
+nuuk
+phnom penh
+rome
+seoul
+sri jayawardenepura kotte
+taipei
+tbilisi
+tegucigalpa
+tokyo
+vientiane
+washington, d.c.
+#Idioms
+lame duck
+tempest in a teapot
+all the rage
+bet the farm
+break a leg
+cry wolf
+drop the ball
+eleventh hour
+face the music
+get the picture
+go postal
+hit the sack
+jump the shark
+long shot
+low-hanging fruit
+move the needle
+no holds barred
+off the wall
+perfect storm
+red flag
+small fry
+tip of the iceberg
+under the weather
+wet blanket
+witch hunt
+yours truly
+#Vegetables
+artichoke
+bamboo shoots
+belgian endive
+bok choy
+celeriac
+chayote
+collard greens
+cucumber
+daikon
+dulse
+edamame
+eggplant
+fennel
+jicama
+kohlrabi
+leeks
+lotus root
+nopal
+okra
+parsnip
+pepper
+pumpkin
+radicchio
+radish
+rutabaga
+salsify
+samphire
+shallots
+sorrel
+squash
+sweet potato
+tomatillo
+turnip
+#Musical instruments
+castanets
+claves
+marimba
+triangle
+congas
+djembe
+spoons
+glass harmonica
+celesta
+bassoon
+cornet
+didgeridoo
+flugelhorn
+ocarina
+pipe organ
+recorder
+vuvuzela
+guzheng
+koto
+shamisen
+theorbo
+sitar
+masenqo
+dulcimer
+harpsichord
+hurdy-gurdy
+bouzouki
+mandolin
+octobass
+vihuela
+autoharp
+viola
+bugle
+timpani
+bagpipes
+calliope
+euphonium
+kazoo
+ukulele
+tin whistle
+kalimba
