@@ -1,5 +1,3 @@
-from termcolor import colored
-
 winner = False
 game_on = True
 board = [["0","1","2","3"], 
@@ -69,22 +67,28 @@ def replacement_choice(board, row, column):
     pos = "full"
     while pos == "full":
         if board[row][column] == " ":
-            user_placement = input("Pick a symbol or string as your character: ")
+            user_placement = input("Pick a symbol or string as your character: ") 
             board[row][column] = user_placement
             pos = "empty"
             
-
         else:
             print("There's already a piece here! Try again.")
             pos = "invalid"
         
         return board
             
- 
 def check_winner(board):
+    '''
+    Description:
+        Checks every index to see if there are any 4 in a row horizontally, vertically, or diagonally.
+    Arguments:
+        board: The empty list that contains three other lists that have four empty strings in them.
+    Returns:
+        A True or False that'll either keep the game going or exit if there is a winner.
+    ''' 
     while winner == False:
         #Checks vertically
-        if board[1][0] == board[2][0] and board[2][0] == board[3][0] and board[3][0] == board[4][0] and board[1][0] != " " and board[2][0] != " " and board[3][0] != " " and board[4][0] != " " :
+        if board[1][0] == board[2][0] and board[2][0] == board[3][0] and board[3][0] == board[4][0] and board[1][0] != " " and board[2][0] != " " and board[3][0] != " " and board[4][0] != " ":
             print("Congrats! You Won.")
             return True
         elif board[1][1] == board[2][1] and board[2][1] == board[3][1] and board[3][1] == board[4][1] and board[1][1] != " " and board[2][1] != " " and board[3][1] != " " and board[4][1] != " " :
@@ -98,8 +102,7 @@ def check_winner(board):
             return True
         
         #Checks horizontally
-        elif board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][2] == board[1][3] and board[1][0] != " " and board[1][1] != " " and board[1][2] != " " and board[1][3] != " " :
-            
+        elif board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][2] == board[1][3] and board[1][0] != " " and board[1][1] != " " and board[1][2] != " " and board[1][3] != " ":
             print("Congrats! You Won.")
             return True
         elif board[2][0] == board[2][1] and board[2][1] == board[2][2] and board[2][2] == board[2][3] and board[2][0] != " " and board[2][1] != " " and board[2][2] != " " and board[2][3] != " " :
@@ -122,37 +125,12 @@ def check_winner(board):
 
         else:
             return False
-            
-def gameon_choice():
-    '''
-    Description:
-        Gives the user the option to exit the game or carry on.
-    Arguments:
-        Takes no arguments.
-    Returns:
-        Either True or False.
-    '''
-    
-    choice = "wrong"
-    option = ["Y", "N"]
-    
-    while choice not in option :
-        choice = input("Keep playing? (Y/N): ").upper()
-        if choice not in option:
-            print("Sorry I don't understand")
-            
-    if choice == "Y":
-        return True
-    else:
-        return False
-    pass   
-    
-
+                 
 if __name__ == "__main__":
     while winner == False:
         display_board(board)
         row,column = position_choice()
-        board = replacement_choice(board, row,column)
+        board = replacement_choice(board,row,column)
         winner = check_winner(board)
         if winner == True:
             display_board(board)
