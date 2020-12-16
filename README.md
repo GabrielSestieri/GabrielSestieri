@@ -2,7 +2,7 @@
 This is where I will be adding and working on projects and scripts in my free time to build a portfolio. 
 
 ## Python
-The python folder is obviously where all my python projects are. These include:
+The Python folder is obviously where all my python projects are. These include:
 
 	1. Connect4
 		A simple Connect 4 game.
@@ -18,4 +18,8 @@ The python folder is obviously where all my python projects are. These include:
 
 	5. Robot Fight
 		A rudimentary robot fight simulation containing two classes. 
-	
+
+## JavaScript
+This is where all my worthy JavaScript projects are showcased. They are subject to constant updates.
+
+	1. CrimeTracker
