@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PG Crime Tracker Map</title>
+        <link rel="stylesheet" type='text/css' href='crimes.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+        <script
+                src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+                crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <h1>Prince George's County Crimes By Address</h1>
+                <nav> 
+                    <div class='links'>
+                        <a class='home' href='index.html'>Home</a>
+                        <a class='mapLink' href='crimes.html'>Crimes</a>
+                        <a class='aboutUs' href='aboutUs.html'>About Us</a>
+                        <a class='docs' href='docs.html'>Documentation</a>
+                    </div>        
+                </nav>
+            </div>
+                <div class='display'>
+                    <div class='formhold'>
+                        <form id="location-form">
+                                <input class = 'userInput' id = 'userInput' type = 'text' placeholder = 'Enter Crime or Date'></input>
+                        </form>
+                    </div>
+                    <!--DIV FOR THE SHOWCASED RESULTS-->
+                    <div class="filterCases">
+                        <ul class = "suggestions">
+                        </ul>
+                        </div>      
+                    </div>
+                </div>
+        </div>
+        <script src="crimes.js"> </script>
+    </body>
+</html>

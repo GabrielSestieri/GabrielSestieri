@@ -1,0 +1,136 @@
+/* Color Palette:
+#68A1A3 - darkest blue
+#D6FEFF - white blue
+#B2EEF0 - light blue
+#A37558 - brown
+#F0CAB1 - beige
+
+From Complementary Adobe Color Wheel
+*/
+
+/*new palette:
+#353535 - Drk grey
+#3C6E71 - turquoise ish
+#FFFFFF - White
+#D9D9D9 - light grey   
+#284B63 - dark blue
+*/
+
+body {
+    background: #D9D9D9;
+    font-family: "Raleway", "HelveticaNeue", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    font-size: 1.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+    margin-bottom: 120px;
+}
+
+
+
+#map{
+    
+    display: flex;
+    min-width: 50%;
+    max-width: 900px;
+    min-height: 600px;
+    max-height: 100%;
+  }
+
+.display {
+    background: #284B63;
+    padding: 10px;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.formhold {
+    background:#fff;
+    padding: 10px;
+    border-radius: 5%;
+    align-items: center;
+}
+.filterDisplay{
+    background: #353535;
+    display:flex;
+    flex-direction: column;
+    height: 81%;
+    width: 300px;
+    border-radius: 5%;
+    padding: 10px;
+    margin-left: 2%;
+    margin-right: -5%;
+    
+}
+.filterDisplay > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filterDisplay label, h3{
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: #3C6E71;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    font-size: 150%;
+    /*font-family: Roboto;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;*/
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #D9D9D9;
+    border-bottom: 3px black;
+}
+
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+    .wrapper {
+      width: 85%;
+      padding: 0; }
+  }

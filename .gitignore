@@ -54,7 +54,6 @@ coverage.xml
 # Translations
 *.mo
 *.pot
-
 # Django stuff:
 *.log
 local_settings.py
@@ -131,3 +130,4 @@ dmypy.json
 #My Programs
 **/try1.py
 **/try2.py
+node_modules

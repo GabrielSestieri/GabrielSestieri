@@ -1,0 +1,162 @@
+/* Color Palette:
+#68A1A3 - darkest blue
+#D6FEFF - white blue
+#B2EEF0 - light blue
+#A37558 - brown
+#F0CAB1 - beige
+
+From Complementary Adobe Color Wheel
+*/
+
+/*new palette:
+#353535 - Drk grey
+#3C6E71 - turquoise ish
+#FFFFFF - White
+#D9D9D9 - light grey   
+#284B63 - dark blue
+*/
+
+body {
+  background: #D9D9D9;
+  font-family: "Raleway", "HelveticaNeue", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .wrapper {
+    width: 85%;
+    padding: 0; }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-size: 1.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+  margin-bottom: 120px;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 420px;
+  background: beige;
+  border-radius: 5%;
+  margin-top: 2%;
+}
+
+
+.display {
+  background: #284B63;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.formhold {
+  background:#fff;
+  padding: 10px;
+  border-radius: 5%;
+  align-items: center;
+  max-width: 160px;
+}
+
+nav {
+  background-color: #3C6E71;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 2%;
+}
+
+
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+  font-size: 150%;
+  /*font-family: Roboto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;*/
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D9D9D9;
+  border-bottom: 3px black;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestions > li {
+  background: radial-gradient(#FFFFFF, #D9D9D9);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  padding-top: 2%;
+  padding-right: 4%;
+  width: 45%;
+  border-radius: 4px;
+  margin-bottom: 2%
+}
+
+li {
+  display: flex;
+  justify-content: start;
+  }
+
+
+@media screen and (min-width: 1600px) { 
+  .container{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .UserInput{
+    width: 250px;
+    height: 25px;
+    margin: 25px 25px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .try {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+  }
+
+
+  .suggestions {
+    padding: 10%;
+  }
+
+  .filterCases {
+    width: 100%;
+  }
+
+}

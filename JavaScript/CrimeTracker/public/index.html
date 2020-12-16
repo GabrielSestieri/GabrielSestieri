@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PG County Crime Tracker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script data-main="config"  src="/node_modules/requirejs/require.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <h1>Prince George's County Crime Map</h1>
+                <nav> 
+                    <div class='links'>
+                        <a class='home' href='index.html'>Home</a>
+                        <a class='mapLink' href='crimes.html'>Crimes</a>
+                        <a class='aboutUs' href='aboutUs.html'>About Us</a>
+                        <a class='docs' href='docs.html'>Documentation</a>
+                    </div>        
+                </nav>
+            </div>
+
+
+            <div class='display'>
+                    <div class='filterDisplay'>
+                        <div class='formhold'>
+                            <form id="location-form">
+                                <input type="text" id="location-input" placeholder = 'Enter Address' class="form-control form-control-lg">
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </form>
+                        </div>
+                        <h3>Filters</h3>
+                            <form>
+                                <label><input type="checkbox" id='select-all' class="filters"> Select All </label>
+                                <label><input type="checkbox" id='homocide' class="filters"> Homocide </label>
+                                <label><input type="checkbox" id='sex' class="filters"> Sex Offense </label>
+                                <label><input type="checkbox" id='vandalism' class="filters"> Vandalism </label>
+                                <label><input type="checkbox" id='assault' class="filters"> Assault </label>
+                                <label><input type="checkbox" id='assaultW' class="filters"> Assault, Weapon </label>
+                                <label><input type="checkbox" id='assaultS' class="filters"> Assault, Shooting </label>
+                                <label><input type="checkbox" id='accident' class="filters"> Accident </label>
+                                <label><input type="checkbox" id='accidentI' class="filters"> Accident with impound </label>
+                                <label><input type="checkbox" id='autoT' class="filters"> Theft from Auto </label>
+                                <label><input type="checkbox" id='autoS' class="filters"> Auto, Stolen </label>
+                                <label><input type="checkbox" id='autoSR' class="filters"> Auto, Stolen & Recovered </label>
+                                <label><input type="checkbox" id='theft' class="filters"> Theft </label>
+                                <label><input type="checkbox" id='robberyC' class="filters"> Robbery, Commercial </label>
+                                <label><input type="checkbox" id='robberyO' class="filters"> Robbery, Other </label>
+                                <label><input type="checkbox" id='robberyV' class="filters"> Robbery, Vehicle </label>
+                                <label><input type="checkbox" id='robberyR' class="filters"> Robbery, Residential </label>
+                                <label><input type="checkbox" id='BnER' class="filters"> B & E, Residential </label>
+                                <label><input type="checkbox" id='BnEC' class="filters"> B & E, Commercial </label>
+                                <label><input type="checkbox" id='BnEV' class="filters"> B & E, Vacant </label>
+                                <label><input type="checkbox" id='BnERV' class="filters"> B & E, Residential (Vacant) </label>
+                                <label><input type="checkbox" id='BnES' class="filters"> B & E, School </label>
+                                <label><input type="checkbox" id='BnEO' class="filters"> B & E, Other </label>
+                            </form>
+                    </div>
+                    
+                <div id="map"></div>
+            </div>
+
+        <script src='index.js'></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSs1yDD-gBeLwJhZptud-Iga12Ytw27Uk&callback=geocode">
+        </script>
+
+    </body>
+</html>
