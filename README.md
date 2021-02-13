@@ -23,3 +23,4 @@ The Python folder is obviously where all my python projects are. These include:
 This is where all my worthy JavaScript projects are showcased. They are subject to constant updates.
 
 	1. CrimeTracker
+		A webapp that uses Google Maps' API and Prince George's county crime data to pinpoint crime around a given address. Can be filtered based on crimes. Has bugs.
