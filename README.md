@@ -23,6 +23,9 @@ The Python folder is obviously where all my python projects are. These include:
 
 	5. Robot Fight
 		A rudimentary robot fight simulation containing two classes. 
+	
+	6. Data Challenge '21
+		Refer to the Data Challenge Section.
 
 ## JavaScript
 This is where all my worthy JavaScript projects are showcased. They are subject to constant updates.
