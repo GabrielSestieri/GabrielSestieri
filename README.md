@@ -38,10 +38,17 @@ Our group of four undergraduates won the award for "Best Expression of Results" 
 		This folder contains CSV files of all the provided countries given by the API after being run through our data scraping program "get_all_country_data.py"
 
 	2. DataScraping
-		In order to analyze the data we first had to scrape it from the API. Using a series of loops we called the API the necessary amount to collect the data on each indicator related to the survey and each country that participated 
+		In order to analyze the data we first had to scrape it from the
+		API. Using a series of loops we called the API the necessary amount
+		to collect the data on each indicator related to the survey and
+		each country that participated 
 
 	3. Graphing
-		Once we had all the necessary information cleaned up and ready to manipulate, we created several programs that could graph the data in certain ways we deemed necessary for analysis.
+		Once we had all the necessary information cleaned up and ready to
+		manipulate, we created several programs that could graph the data
+		in certain ways we deemed necessary for analysis.
 	
 	4. Indicators
-		This folder contains CSV files of all the provided indicators given by the API after being run through our data scraping program "get_all_country_data.py"
+		This folder contains CSV files of all the provided indicators given
+		by the API after being run through our data scraping program
+		"get_all_country_data.py"
