@@ -130,9 +130,10 @@ dmypy.json
 #My Programs
 **/try1.py
 **/try2.py
+**/shayscrape.py
 node_modules
 
-
+/Twitter Bot
 /Learning
 
 /Tools
