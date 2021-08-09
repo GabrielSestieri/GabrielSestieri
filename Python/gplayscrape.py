@@ -29,6 +29,7 @@ while True:
     last_height = new_height
 
 links_games = []
+#Finds the URL and puts it in a list
 elems = driver.find_elements_by_xpath("//a[@href]")
 for elem in elems:
     if "details?id" in elem.get_attribute("href"):
@@ -40,9 +41,11 @@ emails = []
 installs = []
 ratings = []
 appID = []
+#Segments the URL into the AppID only
 for iteration in links_games:
     appID.append(iteration[46:])
 
+#Using google-play-store to scrape each parameter that is asked for
 for apps in appID:
     result = app(
     apps)
@@ -51,6 +54,6 @@ for apps in appID:
     installs.append(result['installs'])
     ratings.append(result['ratings'])
 
-
+#Transforms into a DataFrame and outputs as an Excel Sheet
 df = pd.DataFrame(list(zip(title, emails, installs, ratings)), columns=['Name', "Emails", "Installs", "Ratings"])
 df.to_excel('playstore_scrape.xlsx', header=True, index=False)
