@@ -32,10 +32,10 @@ The Python folder is obviously where all my python projects are. These include:
 		
 	8. Google Play Store Scraper
 		A scraper built using Selenium and the 'google-play-scraper' pyp package. 
-		The program will use Selenium to scrape each app ID and then using a for-loop 
-		will feed each ID to the google-play-scraper package will scrape each Title, 
-		Developer Email, Installs, and Ratings for each app found on the Google Play Store. 
-		Outputs the results into an Excel sheet.
+		The program will use Selenium to scrape each app ID and then using
+		a for-loop will feed each ID to the google-play-scraper package will 
+		scrape each Title, Developer Email, Installs, and Ratings for each 
+		app found on the Google Play Store. Outputs the results into an Excel sheet.
 		
 
 ## JavaScript
