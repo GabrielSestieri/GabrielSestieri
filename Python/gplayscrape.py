@@ -3,9 +3,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from google_play_scraper import app
 import pandas as pd
-
+search = input("What would you like to search? ")
 driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get('https://play.google.com/store/search?q=games&c=apps')
+driver.get('https://play.google.com/store/search?q='+str(search)+'&c=apps')
 
 time.sleep(10)
 
