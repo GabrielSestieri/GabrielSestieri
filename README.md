@@ -34,8 +34,17 @@ The Python folder is obviously where all my python projects are. These include:
 		A scraper built using Selenium and the 'google-play-scraper' pyp package. 
 		The program will use Selenium to scrape each app ID and then using
 		a for-loop will feed each ID to the google-play-scraper package which will 
-		scrape each Title, Developer Email, Installs, and Ratings for each 
+		scrape each Title, Developer Email, and Company Name for each 
 		app found on the Google Play Store. Outputs the results into an Excel sheet.
+		
+	9. LinkedIn Bot
+		Using Selenium this bot will log in to a LinkedIn account using the provided 
+		credenials from 'linkedin.txt'. Then, based on the search entry from the Tkinter 
+		GUI will search a job role through the 'People' filter of LinkedIn.
+		It will then automatically connect with all possible people fitting that criteria 
+		and send them a custom note. For example, typing 'Senior Java Developer' will 
+		search for every person you can connect to that has that description in their profile
+		and automatically send them a message and connect with them. 
 		
 
 ## JavaScript
