@@ -38,8 +38,7 @@ for elem in elems:
 links_games = list(dict.fromkeys(links_games))
 title = []
 emails = []
-installs = []
-ratings = []
+developer = []
 appID = []
 #Segments the URL into the AppID only
 for iteration in links_games:
@@ -51,9 +50,9 @@ for apps in appID:
     apps)
     title.append(result['title'])
     emails.append(result['developerEmail'])
-    installs.append(result['installs'])
-    ratings.append(result['ratings'])
+    developer.append(result['developer'])
+
 
 #Transforms into a DataFrame and outputs as an Excel Sheet
-df = pd.DataFrame(list(zip(title, emails, installs, ratings)), columns=['Name', "Emails", "Installs", "Ratings"])
-df.to_excel('playstore_scrape.xlsx', header=True, index=False)
+df = pd.DataFrame(list(zip(title, emails, developer)), columns=['Name', "Emails", 'Developer'])
+df.to_excel(search+'_playstore_scrape.xlsx', header=True, index=False)
