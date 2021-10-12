@@ -130,7 +130,7 @@ dmypy.json
 #My Programs
 **/try1.py
 **/try2.py
-**/credentials.txt
+**/LinkedInBot/credentials.txt
 node_modules
 
 /Twitter Bot
