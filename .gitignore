@@ -130,8 +130,8 @@ dmypy.json
 #My Programs
 **/try1.py
 **/try2.py
-**/LinkedInBot/names.txt
-**/Python/LinkedInBot/note.txt
+**/names.txt
+**/note.txt
 
 node_modules
 
