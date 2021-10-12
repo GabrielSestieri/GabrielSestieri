@@ -132,6 +132,7 @@ dmypy.json
 **/try2.py
 **/names.txt
 **/note.txt
+**/credentials.txt
 
 node_modules
 
