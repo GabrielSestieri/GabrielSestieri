@@ -37,10 +37,11 @@ def login():
     username = driver.find_element_by_id("session_key")
     username.send_keys(email)
     time.sleep(2)
-    password = driver.find_element_by_id("password")
+    password = driver.find_element_by_id("session_password")
     time.sleep(2)
     password.send_keys(passwd)
-    time.sleep(30)
+    password.send_keys(Keys.RETURN)
+    time.sleep(3)
 
 
 def searchkeyword():
@@ -67,35 +68,42 @@ def connect(num):
     i = 0
     try:
         text = profiles[num].text
+        print(text)
         fullname = (text.split("\n"))[0]
         firstname = (text.split("\n")[0].split(" ")[0])
-        if "LinkedIn Member" not in text and "Follow" not in text:
+        if "LinkedIn Member" not in text and "Follow" not in text and "Message" not in text:
             if profiles[num]:
                 profiles[num+i].click()
                 time.sleep(3)
                 connect = driver.find_element_by_xpath("//button[contains(@aria-label,'Connect with')]").send_keys(Keys.RETURN)
                 time.sleep(3)
                 addnote = driver.find_element_by_xpath("//button[contains(@aria-label,'Add a note')]").send_keys(Keys.RETURN)
-                msg = open("message.txt").read()
+                msg = open("note.txt").read()
                 writemsg = message1 = driver.find_element_by_id("custom-message").send_keys(msg)
                 #send = driver.find_element_by_xpath("//button[contains(@aria-label, 'Send now')]").send_keys(Keys.RETURN)
-                listofnames = open("names.txt", "a")
+                listofnames = open("sentconnections.txt", "a")
                 listofnames.write(fullname+"\n")
                 listofnames.close()
                 time.sleep(3)
                 driver.back()
         elif "Message" in text:
-            more = driver.find_element_by_xpath("//button[contains(@aria-label,'More actions')]").send_keys(Keys.RETURN)
-            connect = driver.find_element_by_xpath("//li[contains(@data-control-name,'connect')]").send_keys(Keys.RETURN)
-            addnote = driver.find_element_by_xpath("//button[contains(@aria-label,'Add a note')]").send_keys(Keys.RETURN)
-            msg = open("note.txt").read()
-            writemsg = message1 = driver.find_element_by_id("custom-message").send_keys(msg)
-            #send = driver.find_element_by_xpath("//button[contains(@aria-label, 'Send now')]").send_keys(Keys.RETURN)
-            listofnames = open("names.txt", "a")
-            listofnames.write(fullname+"\n")
-            listofnames.close()
-            time.sleep(3)
-            driver.back()
+            if profiles[num]:
+                profiles[num+i].click()
+                print("Havent tried yet")
+                print("Whats going on")
+                driver.back()
+                more = driver.find_element_by_xpath("//button[contains(@aria-label,'Send InMail to ')]").send_keys(Keys.RETURN)
+                connect = driver.find_element_by_xpath("//li[contains(@data-control-name,'connect')]").send_keys(Keys.RETURN)
+                print("tried but didnt succeed")
+                addnote = driver.find_element_by_xpath("//button[contains(@aria-label,'Add a note')]").send_keys(Keys.RETURN)
+                msg = open("note.txt").read()
+                writemsg = message1 = driver.find_element_by_id("custom-message").send_keys(msg)
+                #send = driver.find_element_by_xpath("//button[contains(@aria-label, 'Send now')]").send_keys(Keys.RETURN)
+                listofnames = open("sentconnections.txt", "a")
+                listofnames.write(fullname+"\n")
+                listofnames.close()
+                time.sleep(3)
+                driver.back()
         else:
             i+=1
     except:
@@ -129,6 +137,7 @@ def main():
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             driver.find_element_by_xpath("//button[contains(@aria-label,'Next')]").send_keys(Keys.RETURN)
             num = 0
+        print(num)
     
     
     
