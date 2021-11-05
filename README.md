@@ -2,7 +2,6 @@
 This is where I will be adding and working on projects and scripts in my free time to build a portfolio. 
 
 ## Python
-The Python folder is obviously where all my python projects are. These include:
 
 	1. Connect4
 		A simple Connect 4 game.
@@ -46,6 +45,8 @@ The Python folder is obviously where all my python projects are. These include:
 		search for every person you can connect to that has that description in their profile
 		and automatically send them a message and connect with them. 
 		
+## C
+A collection of labs and projects I completed in my CMSC106 course.
 
 ## JavaScript
 This is where all my worthy JavaScript projects are showcased. They are subject to constant updates.
