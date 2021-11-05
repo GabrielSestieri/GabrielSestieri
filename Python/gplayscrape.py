@@ -58,15 +58,3 @@ df = pd.DataFrame(list(zip(title, emails, developer)), columns=['Name', "Emails"
 df.to_excel(search+'_playstore_scrape.xlsx', header=True, index=False)
 
 
-'''message:
-
-Hi NAME,
-Nice meeting you.
-I'm reaching out as I wish to introduce you to our product VidPush that is designed for monetization and re-engagement of mobile apps.
-
-VidPush offers 100% viewability and the ability to wow your customers with a personalized video push notification. We are the only company to date with the ability to send and play a short video within the push notification (on the device level). Here is a short video made for Playtica that showcases our product.
-I'll be happy to schedule a call to discuss a possible test.
-https://youtu.be/EJ9442U93c4
-
-Best Regards
-Tamar'''
