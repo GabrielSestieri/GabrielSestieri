@@ -1,6 +1,5 @@
 from pynput import keyboard
 from pynput.keyboard import Controller, Key, Listener
-count = 0
 keys = ""
 words = ""
 def on_press(key):
