@@ -28,15 +28,18 @@ This is where I will be adding and working on projects and scripts in my free ti
 	
 	7. Data Challenge '21
 		Refer to the Data Challenge Section.
+	8. Keylogger
+		A keylogged built using pynput. Also cleans the file from its raw format. 
+		Will add email capabilities in the future and more slickness.
 		
-	8. Google Play Store Scraper
+	9. Google Play Store Scraper
 		A scraper built using Selenium and the 'google-play-scraper' pyp package. 
 		The program will use Selenium to scrape each app ID and then using
 		a for-loop will feed each ID to the google-play-scraper package which will 
 		scrape each Title, Developer Email, and Company Name for each 
 		app found on the Google Play Store. Outputs the results into an Excel sheet.
 		
-	9. LinkedIn Bot
+	10. LinkedIn Bot
 		Using Selenium this bot will log in to a LinkedIn account using the provided 
 		credenials from 'linkedin.txt'. Then, based on the search entry from the Tkinter 
 		GUI will search a job role through the 'People' filter of LinkedIn.
