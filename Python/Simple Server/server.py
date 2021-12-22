@@ -12,7 +12,7 @@ DISCONNECT = "!DISCONNECT"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
-def handle_client(connection, address):
+def handle_client(connection, address, username):
     print(f"[NEW CONNECTION] {address} connected.")
     
     
@@ -35,7 +35,8 @@ def start_server():
     print(f"[LISTENING] server is listening on {SERVER}")
     while True:
         connection, address = server.accept()
-        thread = threading.Thread(target=handle_client, args=(connection, address))
+        username = str(connection.send("Enter a username: ".encode(FORMAT)))
+        thread = threading.Thread(target=handle_client, args=(connection, address, username))
         thread.start()
         connection.send(f"Welcome to the server {address[0]}! \n".encode(FORMAT))
         connection.send(f"Enter !DISCONNECT to exit the server.".encode(FORMAT))

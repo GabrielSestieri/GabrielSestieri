@@ -1,0 +1,9 @@
+5.40 shirt
+7.80 shoes
+2.40 socks
+6.15 pants
+12.20 tree
+10.25 chair
+20.23 table
+5.34 pan
+9.32 toaster

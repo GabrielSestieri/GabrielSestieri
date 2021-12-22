@@ -2,7 +2,7 @@ import socket
 
 HEADER = 64
 PORT = 5050
-SERVER = " "
+SERVER = "192.168.1.31"
 FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!DISCONNECT"
 ADDR = (SERVER, PORT)
@@ -17,11 +17,10 @@ def send(msg):
     send_length += b" " * (HEADER - len(send_length))
     client.send(send_length)
     client.send(message)
-
 while True:
     print(client.recv(2048).decode(FORMAT))
     send(input("Send a message: "))
-   
+    send()
 
 
 
