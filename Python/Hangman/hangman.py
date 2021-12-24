@@ -127,6 +127,50 @@ def play_game(words):
                 print(" |    (x  <  x)         ")
                 print(" |     c(   )ɔ          ")
                 print("_|__     ^ ^            ")
+        elif letter_guess in phrase:
+            os.system("clear")
+            if count == 0:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |                      ")
+                print(" |                      ")
+                print("_|__                    ")
+            elif count == 1:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |                      ")
+                print("_|__                    ")
+            elif count == 2:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |      (   )           ")
+                print("_|__                    ")
+            elif count == 3:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )           ")
+                print("_|__                    ")
+            elif count == 4:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__                    ")
+            elif count == 5:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__     ^              ")
+            elif count == 6:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (x  <  x)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__     ^ ^            ")
         if count == 6:
             print("Sorry, you're out of guesses!")
             print("The word was {}".format(phrase))      
