@@ -92,10 +92,10 @@ def hit_or_stand(deck,hand):
     while True:
         x = input('Hit or Stand (h/s)? ')
         
-        if x[0].lower() == 'h':
+        if x.lower() == 'h':
             hit(deck, hand)
             
-        elif x[0].lower() == 's':
+        elif x.lower() == 's':
                 print("Player stands, Dealer's turn.")
                 playing = False
         else:
@@ -110,7 +110,7 @@ def show_some(player, dealer):
     print('\nDEALERS HAND:')
     print(' <card hidden>')
     print('',dealer.cards[1])
-    print('\nPLAYERS HAND:', *player.cards, sep="\n ")
+    print('\nPLAYERS HAND:', *player.cards,"\n", sep="\n ")
     
 
 def show_all(player, dealer):
@@ -207,16 +207,17 @@ while True:
     # Ask to play again
     if player_chips.total > 0:
         new_game = input("Would you like to play another hand? y/n ")
-    
-        while new_game[0].lower() != "y" or new_game[0].lower() != "n":
-            if new_game[0].lower() == "y":
-                playing = True 
+        while new_game != "y" or new_game != "n":
+            if new_game.lower() == 'y':
+                playing = True
                 break
-            elif new_game[0].lower() == "n":
-                print("Thanks for playing!")
-                break
+            elif new_game.lower() == 'n':
+                    print("Thanks for playing!")
+                    exit()
             else:
-                "Didn't understand try again"
+                print("Sorry, I can only understand entries y or n")
+                break
+        
     else:
         print("Sorry you have nothing to play with")
         break
