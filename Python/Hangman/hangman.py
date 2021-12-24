@@ -1,4 +1,5 @@
 import random
+import os
 
 def read_words(path): 
     words= {}
@@ -64,8 +65,7 @@ def get_guess(letters):
         return guess
     elif guess.isalpha() == True:
         return guess
-    
-    
+      
 def play_game(words):
     a, b = select_word(words)
     phrase = a
@@ -73,13 +73,14 @@ def play_game(words):
     user_guesses = []
     count = 0
     char = '_ ' 
-    while count < 5:
+    while count < 6:
         print("\nThe category is " + category)
         masked = mask_word(phrase, user_guesses, char) 
         print('')
         print(masked)
         print("Here are your guesses: {}".format(user_guesses))
         print("Incorrect guesses: {}".format(count))
+        #os.system("clear")
         if char not in masked:
             print("Congratulations, you won!")
             break
@@ -88,21 +89,53 @@ def play_game(words):
         if len(letter_guess) != 1:
             count = count
         elif letter_guess not in phrase:
+            os.system("clear")
             count += 1
-        if count > 4:
+            if count == 1:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |                      ")
+                print("_|__                    ")
+            elif count == 2:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |      (   )           ")
+                print("_|__                    ")
+            elif count == 3:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )           ")
+                print("_|__                    ")
+            elif count == 4:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__                    ")
+            elif count == 5:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (o  <  o)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__     ^              ")
+            elif count == 6:
+                print("  ________              ")
+                print(" |        |             ")
+                print(" |    (x  <  x)         ")
+                print(" |     c(   )ɔ          ")
+                print("_|__     ^ ^            ")
+        if count == 6:
             print("Sorry, you're out of guesses!")
-            print("The word was {}".format(phrase))
-            
-
-                
-            
+            print("The word was {}".format(phrase))      
     
 def main(path):
     final = read_words(path)
     play_game(final)
     
-
-
+    
 if __name__ == '__main__':
     main('words_by_category.txt')
     
