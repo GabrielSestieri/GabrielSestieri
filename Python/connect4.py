@@ -1,3 +1,4 @@
+import os
 winner = False
 game_on = True
 board = [["0","1","2","3"], 
@@ -128,11 +129,15 @@ def check_winner(board):
                  
 if __name__ == "__main__":
     while winner == False:
-        display_board(board)
-        row,column = position_choice()
-        board = replacement_choice(board,row,column)
-        winner = check_winner(board)
+        if True:
+            display_board(board)
+            row,column = position_choice()
+            board = replacement_choice(board,row,column)
+            winner = check_winner(board)
+            os.system("clear")
         if winner == True:
             display_board(board)
+            print("You Win!")
+    
         
  

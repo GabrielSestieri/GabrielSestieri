@@ -40,4 +40,4 @@ def main(drug, path):
     dataframe.to_csv(path)
     
 if __name__ == '__main__':
-    main('Testosterone', 'file.txt')
+    main('Insulin', 'interactions.txt')

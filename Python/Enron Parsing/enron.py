@@ -52,15 +52,24 @@ class Email:
     self.subject = subject
     self.sender = sender
     self.receiver = receiver
-    self.body = body
-    
+    self.body = body    
     
 def main(path):
   '''
   Creates an instance of server that then outputs the length of the list of emails.
   '''
   server = Server(path)
-  return len(server.emails)
+  word = str(sys.argv[2])
+  if any(word in w for w in server.emails):
+    for i in range(0,10001):
+      if word in server.emails[i]:
+        print("----------BEGINNING OF EMAIL----------")
+        print("Sender: ", server.sender[i])
+        print("Receiver: ", server.receiver[i])
+        print("Subject: ", server.subject[i])
+        print("Body: ", server.body[i])
+        print("----------END OF EMAIL----------")
+  
   
   
 def parse_args(args_list):
@@ -72,5 +81,5 @@ def parse_args(args_list):
   return parser
 
 if __name__ == "__main__": 
-  arg = parse_args(sys.argv[1:])
+  arg = "emails_10k.txt"
   main(arg)

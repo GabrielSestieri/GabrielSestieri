@@ -20,7 +20,6 @@ def send(msg):
 while True:
     print(client.recv(2048).decode(FORMAT))
     send(input("Send a message: "))
-    send()
 
 
 

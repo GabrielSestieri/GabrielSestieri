@@ -48,7 +48,7 @@ def searchkeyword():
     '''DESCRIPTION: As soon as your're logged in, the searchleyword() function will open the search bar and based on what you have given it in the GUI 
     it will search that up through the 'People' filter.'''
     
-    searchbar = driver.find_element_by_id('global-nav-typeahead').click()
+    searchbar = driver.find_element_by_xpath("//input[contains(@aria-label, 'Search')]").click()
     search = driver.find_element_by_class_name('search-global-typeahead__input')
     keyword = key_wrd.get() #NOTICE that the keyword variable is defined here after using the get() function that gets whatever the user inputted into the GUI.
     search.send_keys(keyword) 
@@ -118,12 +118,7 @@ searchword.pack()
 key_wrd = tk.Entry(frame, bg="white")
 key_wrd.pack()
 
-#Send a customize message (less than 300 characters)
-messagebox = tk.Label(frame, justify=LEFT, padx=(5), pady=(5))
-messagebox.config(text="What message would you like to send?", font=("Helvetica", 15))
-messagebox.place(x = 65, y=100)
-message = tk.Text(frame, bg="white")
-message.place(width=350, height=200, x=25,y=150)
+
 
 #The function that runs all other functions
 def main():

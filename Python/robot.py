@@ -37,36 +37,35 @@ class CompoundRobot(Robot):
         Robot_obj.compound = self
     
 def main():
-    sav = Robot()
-    gab = Robot()
+    Tom = Robot()
+    John = Robot()
     
-    vicki = Robot()
-    fer = Robot()
+    Victoria = Robot()
+    Mandy = Robot()
     
-    sav.inflict_damage(vicki)
-    sav.inflict_damage(fer)
-    gab.inflict_damage(vicki)
-    gab.inflict_damage(fer)
+    John.inflict_damage(Victoria)
+    John.inflict_damage(Mandy)
+    Tom.inflict_damage(Victoria)
+    Tom.inflict_damage(Mandy)
+     
+    Mandy.inflict_damage(Tom)
+    Mandy.inflict_damage(John)
+    Victoria.inflict_damage(Tom)
+    Victoria.inflict_damage(Mandy)
     
+    TomJohn = CompoundRobot(John, Tom)
+    VicMandy = CompoundRobot(Victoria, Mandy)
     
-    fer.inflict_damage(gab)
-    fer.inflict_damage(sav)
-    vicki.inflict_damage(gab)
-    vicki.inflict_damage(fer)
-    
-    savgab = CompoundRobot(sav, gab)
-    fervick = CompoundRobot(vicki, fer)
-    
-    savgab.inflict_damage(fervick)
-    fervick.inflict_damage(savgab)
+    TomJohn.inflict_damage(VicMandy)
+    VicMandy.inflict_damage(TomJohn)
 
     
-    if savgab.energy > fervick.energy:
-        print("\Savgab the robot WON with %s points of energy left\n" % (savgab.energy))
-        print("Fervick the compounded robot LOST with %s points of energy left\n" % (fervick.energy))
+    if TomJohn.energy > VicMandy.energy:
+        print("TomJohn the compunded robot WON with %s points of energy left\n" % round(TomJohn.energy,2))
+        print("VicMandy the compounded robot LOST with %s points of energy left\n" % round(VicMandy.energy,2))
     else:
-        print("\Fervick the compounded robot WON with %s points of energy left\n" % (fervick.energy))
-        print("Savgab the robot LOST with %s points of energy left\n" % (savgab.energy))
+        print("VicMandy the compounded robot WON with %s points of energy left\n" % round(VicMandy.energy,2))
+        print("TomJohn the compounded robot LOST with %s points of energy left\n" % round(TomJohn.energy,2))
     
     
 if __name__ == '__main__':
