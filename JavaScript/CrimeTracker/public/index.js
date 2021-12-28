@@ -6,7 +6,7 @@ locationForm.addEventListener('submit', geocode);
 var infoWindow;
 
 function geocode(e){
-  e.preventDefault();
+  //e.preventDefault();
 
   var location = document.getElementById('location-input').value;
   
