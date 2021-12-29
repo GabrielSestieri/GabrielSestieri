@@ -41,6 +41,7 @@ def login():
     time.sleep(2)
     password.send_keys(passwd)
     password.send_keys(Keys.RETURN)
+    file.close()
     time.sleep(3)
 
 
