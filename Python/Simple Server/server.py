@@ -2,7 +2,6 @@ import socket
 import threading
 from datetime import *
 
-
 PORT = 5051
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
@@ -58,7 +57,6 @@ def handle_client(connection, address):
                         print(ACTIVE_CLIENTS[ip])
                     if ip == address[0]:
                         print(f"[{time}] {user[0]}: {msg}")
-            #RANDOM COMMENT                     
     finally:
         with clients_lock:
             clients.remove(connection)
@@ -77,8 +75,6 @@ def start_server():
         thread.start()
         connection.send(f"Welcome to the server {address[0]}! \n".encode(FORMAT))
         connection.send(f"Enter !DISCONNECT to exit the server.".encode(FORMAT))
-        print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
-        
-        
+        print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")     
 print("[STARTING] server is starting...")
 start_server()

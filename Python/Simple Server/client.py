@@ -32,7 +32,6 @@ def start():
         else:
             print("Username is required")
             username_status = False
-
     while True:
         msg = (input("Send a message: (q for quit): "))
         if msg == "q":
@@ -43,20 +42,4 @@ def start():
     send(connection, DISCONNECT)
     time.sleep(1)
     print("Disconnected")
-
 start()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
