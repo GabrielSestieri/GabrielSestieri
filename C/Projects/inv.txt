@@ -1,9 +1,0 @@
-shirt
-shoes
-socks
-pants
-tree
-chair
-table
-pan
-toaster
